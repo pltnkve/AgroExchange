@@ -1,0 +1,25 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: 32px 64px;
+  margin: auto;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 128px;
+  height: 86px;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

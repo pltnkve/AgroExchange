@@ -1,0 +1,8 @@
+.changeFuturesAlert {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--neutral);
+  padding: 12px;
+  border-radius: 16px;
+}

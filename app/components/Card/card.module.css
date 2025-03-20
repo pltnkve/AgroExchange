@@ -1,0 +1,50 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 12px;
+    gap: 12px;
+    justify-content: space-between;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background-color: var(--neutral);
+}
+
+.card:hover {
+    border-color: var(--neutral);
+}
+
+@media (pointer: coarse) {
+    .card:hover {
+        border-color: transparent;
+    }
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+
+
+@media (max-width: 990px) {
+    .cardHeader {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 770px) {
+    .cardHeader {
+        flex-direction: row;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardHeader {
+        flex-direction: column;
+        gap: 0;
+    }
+}

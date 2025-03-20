@@ -1,0 +1,180 @@
+.page {
+  display: flex;
+  min-height: 100svh;
+  padding: 32px 64px;
+  margin: auto;
+  gap: 64px;
+}
+
+.infoContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.infoMain {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoRow {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.infoFutures {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chartContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.newsYuanContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.newsYuanContainer .infoNews {
+  display: none;
+}
+
+.boxChart {
+  background-color: var(--box-neutral);
+  border-radius: 16px;
+  padding: 12px;
+  height: calc(100vh - 64px);
+  width: 100%;
+}
+
+.boxChart div {
+  height: 100%;
+}
+
+.legend {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+  width: calc(100% - 128px);
+  align-items: center;
+}
+
+.legend p {
+  cursor: default;
+}
+
+.legendSelect {
+  font-family: var(--font-interVariable), sans-serif;
+  font-size: 1rem;
+  font-size: clamp(1rem, 1vw, 2rem);
+  color: var(--foreground);
+
+  background-color: var(--box-neutral);
+  padding: 0 8px;
+  border: 2px solid var(--text-skeleton);
+  border-radius: 22px;
+}
+
+.legendSelect:hover {
+  cursor: pointer;
+  border-color: var(--accent);
+}
+
+.infoNews {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+
+@media (max-width: 1400px) {
+  .page {
+    flex-direction: column;
+    padding: 32px;
+  }
+
+  .infoMain, .infoCards {
+    flex-direction: row;
+  }
+
+  .infoContainer, .chartContainer {
+    width: 100%;
+  }
+
+  .infoContainer .infoNews {
+    display: none;
+  }
+
+  .newsYuanContainer .infoNews {
+    display: flex;
+    width: 40%;
+  }
+
+  .newsYuanContainer .boxChart {
+    width: 60%;
+  }
+}
+
+@media (max-width: 990px) {
+  .page {
+    padding: 16px;
+  }
+
+  .infoContainer, .chartContainer {
+    gap: 64px;
+  }
+
+  .newsYuanContainer {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .newsYuanContainer .boxChart {
+    order: 1;
+    width: 100%;
+  }
+
+  .newsYuanContainer .infoNews {
+    order: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px) {
+  .page {
+    padding: 8px;
+  }
+
+  .infoMain, .infoCards {
+    flex-direction: column;
+  }
+
+  .infoMain, .infoCards, .infoFutures, .infoRow {
+    gap: 8px;
+  }
+}
+
+
+
+@media (pointer: coarse) {
+  .legendSelect:hover {
+    border-color: var(--text-skeleton);
+  }
+}
